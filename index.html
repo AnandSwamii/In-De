@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Increment & Decrement</title>
+
+    <style>
+        #main
+        {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* background-color: greenyellow; */
+            background-image: url(./board-5599231_1280.webp);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #box
+        {
+            /* height: 50vh; */
+            width: 30vw;
+            /* display: flex; */
+            /* align-items: center; */
+            /* justify-content: space-around; */
+            /* flex-direction: column; */
+            background-color: palegreen;
+            text-align: center;
+            border: 1px solid black;
+            border-radius: 30px ;
+        }
+        button
+        {
+            padding: 10px 20px;
+            margin: 25px;
+            font-size: 22px;
+            color: white;
+            background-color: purple;
+            border-radius: 50px;
+        }
+        @media screen and (min-width:320px) and (max-width:767px){
+           #box
+           {
+            
+            padding: 10px;
+           
+           } 
+           button
+           {
+            margin: 3px;
+            padding: 4px 7px;
+            font-size: 14px;
+           }
+        }
+
+        @media screen and (min-width:768px) and (max-width:1365px){
+            #box
+           {
+          
+            padding: 10px;
+            
+           } 
+           button
+           {
+            margin: 3px;
+            padding: 4px 7px;
+            font-size: 14px;
+           }
+        }
+        @media screen  and (min-width:1366px) and (max-width:1919px){
+            #box
+           {
+            padding: 10px;
+            
+           } 
+           button
+           {
+            margin: 3px;
+            padding: 10px 15px;
+            font-size: 18px;
+           }
+        }
+
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div id="box">
+            <H1 id="num">0</H1>
+            <button onclick="inc()">Increment</button>
+            <button onclick="dec()">Decrement</button>
+            <button onclick="res()">Reset</button>
+        </div>
+    </div>
+
+    <script>
+    var c=0
+    function inc()
+    {
+        c=c+1
+        var data=document.getElementById('num')
+        data.innerHTML=c
+    }
+    function dec()
+    {
+        if(c<=0)
+        {
+            alert('Negetive Value Are Not allowed')
+        }
+        else
+        {
+            c=c-1
+        var data=document.getElementById('num')
+        data.innerHTML=c  
+        }
+
+    }
+    function res()
+    {
+        c=0
+        var data=document.getElementById('num')
+        data.innerHTML=c
+    }
+    </script>
+</body>
+</html>
